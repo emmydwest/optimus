@@ -6,17 +6,17 @@ import { Copy, Check } from "lucide-react";
 const codeExamples = [
   {
     label: "Install",
-    code: `npm install @optimus/sdk
+    code: `npm install @ejetar/sdk
 
 # or
-yarn add @optimus/sdk
-pnpm add @optimus/sdk`,
+yarn add @ejetar/sdk
+pnpm add @ejetar/sdk`,
   },
   {
     label: "Initialize",
-    code: `import { Optimus } from '@optimus/sdk'
+    code: `import { Ejetar } from '@ejetar/sdk'
 
-const optimus = new Optimus({
+const optimus = new Ejetar({
   apiKey: process.env.OPTIMUS_KEY
 })`,
   },
