@@ -71,7 +71,10 @@ export function IntegrationsSection() {
                 >
                   <div className="flex items-center gap-3 mb-3">
                     <img
-                      src={`https://cdn.jsdelivr.net/gh/glincker/thesvg@main/public/icons/${integration.logo}/light.svg`}
+                      src={`https://cdn.jsdelivr.net/gh/glincker/thesvg@main/public/icons/${integration.logo}/default.svg`}
+                      onError={(event) => {
+                        event.currentTarget.src = `https://cdn.jsdelivr.net/gh/glincker/thesvg@main/public/icons/${integration.logo}/mono.svg`;
+                      }}
                       alt=""
                       aria-hidden="true"
                       className="size-7 object-contain"
@@ -100,7 +103,10 @@ export function IntegrationsSection() {
                 >
                   <div className="flex items-center gap-3 mb-3">
                     <img
-                      src={`https://cdn.jsdelivr.net/gh/glincker/thesvg@main/public/icons/${integration.logo}/light.svg`}
+                      src={`https://cdn.jsdelivr.net/gh/glincker/thesvg@main/public/icons/${integration.logo}/default.svg`}
+                      onError={(event) => {
+                        event.currentTarget.src = `https://cdn.jsdelivr.net/gh/glincker/thesvg@main/public/icons/${integration.logo}/mono.svg`;
+                      }}
                       alt=""
                       aria-hidden="true"
                       className="size-7 object-contain"
