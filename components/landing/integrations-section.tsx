@@ -3,18 +3,18 @@
 import { useEffect, useState, useRef } from "react";
 
 const integrations = [
-  { name: "GitHub", category: "Version Control" },
-  { name: "Slack", category: "Communication" },
-  { name: "Stripe", category: "Payments" },
-  { name: "PostgreSQL", category: "Database" },
-  { name: "Redis", category: "Cache" },
-  { name: "AWS", category: "Cloud" },
-  { name: "MongoDB", category: "Database" },
-  { name: "Vercel", category: "Hosting" },
-  { name: "Figma", category: "Design" },
-  { name: "Linear", category: "Project Management" },
-  { name: "Notion", category: "Documentation" },
-  { name: "OpenAI", category: "AI/ML" },
+  { name: "GitHub", category: "Version Control", logo: "github" },
+  { name: "Slack", category: "Communication", logo: "slack" },
+  { name: "Stripe", category: "Payments", logo: "stripe" },
+  { name: "PostgreSQL", category: "Database", logo: "postgresql" },
+  { name: "Redis", category: "Cache", logo: "redis" },
+  { name: "AWS", category: "Cloud", logo: "aws" },
+  { name: "MongoDB", category: "Database", logo: "mongodb" },
+  { name: "Vercel", category: "Hosting", logo: "vercel" },
+  { name: "Figma", category: "Design", logo: "figma" },
+  { name: "Linear", category: "Project Management", logo: "linear" },
+  { name: "Notion", category: "Documentation", logo: "notion" },
+  { name: "OpenAI", category: "AI/ML", logo: "openai" },
 ];
 
 export function IntegrationsSection() {
@@ -69,8 +69,16 @@ export function IntegrationsSection() {
                   key={`${integration.name}-${setIndex}`}
                   className="shrink-0 px-8 py-6 border border-foreground/10 hover:border-foreground/30 hover:bg-foreground/[0.02] transition-all duration-300 group"
                 >
-                  <div className="text-lg font-medium group-hover:translate-x-1 transition-transform">
-                    {integration.name}
+                  <div className="flex items-center gap-3 mb-3">
+                    <img
+                      src={`https://cdn.jsdelivr.net/gh/glincker/thesvg@main/public/icons/${integration.logo}/light.svg`}
+                      alt=""
+                      aria-hidden="true"
+                      className="size-7 object-contain"
+                    />
+                    <div className="text-lg font-medium group-hover:translate-x-1 transition-transform">
+                      {integration.name}
+                    </div>
                   </div>
                   <div className="text-sm text-muted-foreground">{integration.category}</div>
                 </div>
@@ -90,8 +98,16 @@ export function IntegrationsSection() {
                   key={`${integration.name}-reverse-${setIndex}`}
                   className="shrink-0 px-8 py-6 border border-foreground/10 hover:border-foreground/30 hover:bg-foreground/[0.02] transition-all duration-300 group"
                 >
-                  <div className="text-lg font-medium group-hover:translate-x-1 transition-transform">
-                    {integration.name}
+                  <div className="flex items-center gap-3 mb-3">
+                    <img
+                      src={`https://cdn.jsdelivr.net/gh/glincker/thesvg@main/public/icons/${integration.logo}/light.svg`}
+                      alt=""
+                      aria-hidden="true"
+                      className="size-7 object-contain"
+                    />
+                    <div className="text-lg font-medium group-hover:translate-x-1 transition-transform">
+                      {integration.name}
+                    </div>
                   </div>
                   <div className="text-sm text-muted-foreground">{integration.category}</div>
                 </div>
